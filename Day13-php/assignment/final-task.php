@@ -16,7 +16,7 @@
   echo "<h1>Task 1</h1>";
   $name = "shahrul";
   $age = "11";
-  $city = "KL";
+  $city = "Penang.";
   echo "<h3>My name is $name, I am $age years old, and I live in $city</h3>";
 
   echo "<br>";
@@ -25,7 +25,7 @@
 
   /* TASK 2 */
   echo "<h1>Task 2</h1>";
-  $grade = 85;
+  $grade = 10;
 
   if ($grade >= 90) {
    echo "<h3>Excellent!</h3>";
@@ -114,7 +114,9 @@
   }
 
   calculateSum(1, 1);
-  calculateSum(1, 2)
+  calculateSum(1, 2);
+  calculateSum(1, 10);
+
   ?>
  </div>
 
