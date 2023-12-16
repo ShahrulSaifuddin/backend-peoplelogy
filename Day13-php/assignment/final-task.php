@@ -10,7 +10,7 @@
 </head>
 
 <body>
- <div class="container m-5">
+ <div class="container my-5">
   <?php
   /* TASK 1 */
   echo "<h1>Task 1</h1>";
