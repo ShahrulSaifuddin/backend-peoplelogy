@@ -79,7 +79,7 @@
   $checkStmt->store_result();
 
   if ($checkStmt->num_rows > 0) {
-   echo "<script>alert('One or more fields already exist')</script>";
+   echo "<script>alert('Email already exist')</script>";
   } else {
    // Record doesn't exist, proceed with the insert
    $insertSql = "INSERT INTO users (first_name, last_name, email, address, password) VALUES (?, ?, ?, ?, ?)";
@@ -97,7 +97,7 @@
 
   $checkStmt->close();
 
-  // //retrieve data from table
+  //retrieve data from table
   $sql = "SELECT * FROM users";
   $result = mysqli_query($conn, $sql);
 
