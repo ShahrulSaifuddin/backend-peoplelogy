@@ -9,13 +9,13 @@
      $result = mysqli_query($conn, $sql);
 
      if (mysqli_num_rows($result) > 0) {
-      while ($row = mysqli_fetch_assoc($result)) {
-       echo $row["id"] . " ";
-       echo $row["name"];
-       echo "<br>";
-      }
+          while ($row = mysqli_fetch_assoc($result)) {
+               echo $row["id"] . " ";
+               echo $row["name"];
+               echo "<br>";
+          }
      } else {
-      echo "no user found";
+          echo "no user found";
      }
 
 
@@ -41,14 +41,20 @@
      echo "<br>";
      ?> -->
 
+<!-- INSERT DATA -->
 <?php
-include("insertData.php");
+// include("insertData.php");
 
 echo "<br>";
 echo "<br>";
 echo "<br>";
 ?>
 
+<!-- FORM DATA -->
 <?php
-echo "hello world"
+include("formData.php")
+?>
+
+<?php
+echo ""
 ?>
