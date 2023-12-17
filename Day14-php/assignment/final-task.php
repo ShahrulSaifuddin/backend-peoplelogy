@@ -12,9 +12,9 @@
 </head>
 
 <body>
- <div class="container mt-3">
+ <div class="container my-3">
   <h2>Form User</h2>
-  <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+  <form class="" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
    <!-- first name -->
    <div class="form-floating mb-3 mt-3">
     <input required type="text" class="form-control" id="fname" placeholder="Enter First Name" name="fname">
@@ -107,7 +107,7 @@
     echo $row["first_name"] . "<br>";
     echo $row["last_name"] . "<br>";
     echo $row["email"] . "<br>";
-    echo $row["address"] . "<br>";
+    echo $row["address"] . "<br> <br> <br>";
    }
   } else {
    echo "no user found";
