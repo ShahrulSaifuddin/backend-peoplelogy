@@ -33,14 +33,21 @@
      ?> -->
 
 <!-- CREATE TABLE -->
+<!-- <?php
+     include("createTable.php");
+
+     echo "<br>";
+     echo "<br>";
+     echo "<br>";
+     ?> -->
+
 <?php
-include("createTable.php");
+include("insertData.php");
 
 echo "<br>";
 echo "<br>";
 echo "<br>";
 ?>
-
 
 <?php
 echo "hello world"
