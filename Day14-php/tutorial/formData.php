@@ -58,17 +58,17 @@
    die("Connection failed: " . $conn->connect_error);
   }
 
-  // Check if email already exists
-  $checkSql = "SELECT * FROM MyGuests WHERE email = ?";
+  // Check if email, first name, and last name already exist
+  $checkSql = "SELECT * FROM MyGuests WHERE email = ? AND firstname = ? AND lastname = ?";
   $checkStmt = $conn->prepare($checkSql);
-  $checkStmt->bind_param("s", $email);
+  $checkStmt->bind_param("sss", $email, $firstName, $lastName);
   $checkStmt->execute();
   $checkStmt->store_result();
 
   if ($checkStmt->num_rows > 0) {
-   echo "<script>alert('Email already exists')</script>";
+   echo "<script>alert('One or more fields already exist')</script>";
   } else {
-   // Email doesn't exist, proceed with the insert
+   // Record doesn't exist, proceed with the insert
    $insertSql = "INSERT INTO MyGuests (firstname, lastname, email) VALUES (?, ?, ?)";
    $insertStmt = $conn->prepare($insertSql);
    $insertStmt->bind_param("sss", $firstName, $lastName, $email);
