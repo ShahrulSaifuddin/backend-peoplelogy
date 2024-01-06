@@ -1,3 +1,7 @@
 <h1>about page</h1>
-<p>ID = {{ $ID }}</p>
+@if ($ID)
+    <p>ID = {{ $ID }}</p>
+@else
+    <p>ID = not found</p>
+@endif
 <a href="{{ route('home') }}">home</a>
