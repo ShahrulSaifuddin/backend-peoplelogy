@@ -29,8 +29,8 @@ Route::get('/about/{name}', function (string $name) {
     ]);
 })->name('about');
 
-Route::get('/contact/{num?}', function (int $num) {
+Route::get('/contact/{num?}', function (string $num = null) {
     return view('contact', [
         'contactData' => $num
     ]);
-})->name('contact');
+})->whereNumber('num')->name('contact');
