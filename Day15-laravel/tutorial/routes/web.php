@@ -38,3 +38,11 @@ Route::get('/about/{id?}', function (string $id = null) {
     'id',
     '[0-5]' //[0-9] [a-z]+ [a-zA-Z]+ [A-Z]+ 
 )->name('about');
+
+Route::get('/header', function () {
+    return view('header');
+})->name('header');
+
+Route::get('/footer', function () {
+    return view('footer');
+})->name('footer');
