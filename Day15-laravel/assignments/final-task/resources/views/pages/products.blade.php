@@ -43,7 +43,7 @@
                         <h5 class="card-title">Product 3</h5>
                         <p class="card-text">Description of Product 3. Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit.</p>
-                        <a href="{{ route('product', ['id' => '1']) }}" class="btn btn-primary">View Details</a>
+                        <a href="{{ route('product', ['id' => '3']) }}" class="btn btn-primary">View Details</a>
                     </div>
                 </div>
             </div>
