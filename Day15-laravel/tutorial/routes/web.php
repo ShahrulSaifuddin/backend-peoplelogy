@@ -15,4 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
+
+//{id} from route then $id is a parameter value route the use it to pass the value into ID variable  to be use in hte about page
+Route::get('/about/{id}', function (string $id) {
+    return view('about', [
+        'ID' => $id
+    ]);
+})->whereNumber('id')->name('about');
