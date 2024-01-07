@@ -12,14 +12,15 @@ class UserController extends Controller
         return view('welcome');
     }
 
-    public function showUsers(): View
+    public function showUsers(string $id): View
     {
         return view('Users.index', [
             'users' => [
                 1 => ['name' => 'john', 'city' => 'chicago'],
                 2 => ['name' => 'anna', 'city' => 'new york'],
                 3 => ['name' => 'mike', 'city' => 'texas'],
-            ]
+            ],
+            'ID' => $id
         ]);
     }
 }
